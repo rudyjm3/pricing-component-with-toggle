@@ -8,6 +8,7 @@ body{
    background-position: right top, left bottom;
    background-repeat: no-repeat;
    background-size: contain, auto;
+   background-color: var(--Very-Light-Grayish-Blue);
 }
 
 .main-container{
@@ -20,13 +21,14 @@ body{
    header{
       width: 100%;
       text-align: center;
-      background-color: yellow;
+      // background-color: yellow;
+      margin-bottom: 3rem;
       .title-wrapper{
          text-align: center;
          .title{
-            font-size: 3rem;
+            font-size: 1.6rem;
             color: var(--Dark-Grayish-Blue);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
          }
       }
       .toggle-wrapper{
@@ -34,16 +36,16 @@ body{
          justify-content: center;
          align-items: center;
          p{
-            font-size: 1.5rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            color: var(--Grayish-Blue);
+            color: var(--Light-Grayish-Blue);
          }
          .switch{
             position: relative;
             display: inline-block;
             width: 60px;
             height: 34px;
-            margin: 0 15px;
+            margin: 0 20px;
             input{
                opacity: 0;
                width: 0;
@@ -57,7 +59,7 @@ body{
                right: 0;
                bottom: 0;
                border-radius: 34px;
-               background-color: #ccc;
+               background-color: hsl(236, 72%, 79%);
                -webkit-transition: .4s;
                transition: .4s;
             }
@@ -84,6 +86,116 @@ body{
                -ms-transform: translateX(26px);
                transform: translateX(26px);
             }
+         }
+      }
+   }
+   .cards-container{
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      width: 100%;
+      // padding: 10px;
+      
+      .card{
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         width: 33.33%;
+         height: 100%;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0px 5px 20px 5px rgba(109, 68, 244, 0.3);
+
+         .card-title{
+            margin-bottom: 1rem;
+         }
+         .price-wrapper{
+            margin-bottom: 1rem;
+            .price{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 3.5rem;
+               font-weight: 700;
+               // line-height: 1.5;
+               .currencey-symbol{
+                  margin-right: 2px;
+                  font-size: 2rem;
+               }
+            }
+         }
+         .feature-list-wrapper{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            .feature-list{
+               list-style: none;
+               .feature-list-item{
+                  font-weight: 700;
+                  font-size: 1rem;
+                  padding: 15px 0;
+                  border-top: 1px solid var(--Light-Grayish-Blue);
+               }
+               .feature-list-item:nth-child(3){
+                  border-bottom: 1px solid var(--Light-Grayish-Blue);
+               }
+            }
+         }
+         .learn-more{
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+         }
+      }
+      .sm-card{
+         background-color: white;
+         color: #333;
+         z-index: 1;
+         .learn-more{
+            color: white;
+            background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+         }
+         .learn-more:hover{ //link/button hover for small cards
+            border: 1px solid var(--Dark-Grayish-Blue);
+            color: var(--Dark-Grayish-Blue);
+            background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+         }
+      }
+      .card:nth-child(1){
+         right: -20px;
+      }
+      .card:nth-child(3){
+         right: 20px;
+      }
+      .med-card{
+         background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+         color: white;
+         padding: 4rem 2.5rem;
+         z-index: 2;
+         .feature-list{
+            .feature-list-item{
+               border-top: 1px solid var(--Light-Grayish-Blue) !important;
+            } 
+            .feature-list-item:nth-child(3){
+               border-bottom: 1px solid var(--Light-Grayish-Blue) !important;
+            }
+         }
+         .learn-more{
+            background-color: white !important; 
+            color:hsl(237, 63%, 64%);
+         }
+         .learn-more:hover{ //link/button hover for medium cards
+            border: 1px solid white;
+            color: white;
+            background-color: hsl(237, 63%, 64%)!important;
          }
       }
    }
