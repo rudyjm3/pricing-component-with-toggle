@@ -163,13 +163,15 @@ body {
   background-color: white;
   transition: 0.4s;
 }
-.main-container header .toggle-wrapper .switch input:checked + .slider {
+.main-container header .toggle-wrapper .switch #check-box:checked + .slider {
   background-color: hsl(236deg, 72%, 79%);
 }
-.main-container header .toggle-wrapper .switch input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+.main-container header .toggle-wrapper .switch #check-box:focus-within + .slider {
+  outline: 1px solid hsl(237deg, 50%, 57%);
+  box-shadow: 0px 3px 2px 3px rgba(125, 96, 222, 0.2);
+  background-color: hsl(236deg, 53%, 83%);
 }
-.main-container header .toggle-wrapper .switch input:checked + .slider:before {
+.main-container header .toggle-wrapper .switch #check-box:checked + .slider:before {
   transform: translateX(18px);
 }
 .main-container .cards-container {
@@ -188,7 +190,7 @@ body {
   height: 100%;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0px 5px 20px 5px rgba(109, 68, 244, 0.3);
+  box-shadow: 0px 6px 10px 3px rgba(109, 68, 244, 0.2);
 }
 .main-container .cards-container .card .card-title {
   margin-bottom: 0.5rem;
@@ -202,6 +204,7 @@ body {
   align-items: center;
   font-size: 3.5rem;
   font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
 }
 .main-container .cards-container .card .price-wrapper .price .currencey-symbol {
   margin-right: 2px;
@@ -263,6 +266,9 @@ body {
   color: white;
   padding: 3.5rem 2rem;
   z-index: 2;
+}
+.main-container .cards-container .med-card .price {
+  color: white !important;
 }
 .main-container .cards-container .med-card .feature-list .feature-list-item {
   border-top: 1px solid var(--Light-Grayish-Blue) !important;

@@ -75,10 +75,15 @@ body{
                transition: .4s;
             }
             #check-box:checked + .slider{
-               background-color: hsl(236, 72%, 79%);;
+               // color: #6B71DE;
+               background-color: hsl(236, 72%, 79%);
+               // background-color: hsl(236, 53%, 83%);
             }
-            #check-box:focus + .slider{
-               box-shadow: 0 0 1px #2196f3;
+            #check-box:focus-within + .slider{
+               outline: 1px solid hsl(237, 50%, 57%);
+               // box-shadow: 0px 5px 20px 5px rgba(109, 68, 244, 0.3);
+               box-shadow: 0px 3px 2px 3px rgba(125, 96, 222, 0.2);
+               background-color: hsl(236, 53%, 83%);
             }
             #check-box:checked + .slider:before {
                transform: translateX(18px);
@@ -103,7 +108,7 @@ body{
          height: 100%;
          padding: 2rem;
          border-radius: 10px;
-         box-shadow: 0px 5px 20px 5px rgba(109, 68, 244, 0.3);
+         box-shadow: 0px 6px 10px 3px rgba(109, 68, 244, 0.2);
 
          .card-title{
             margin-bottom: 0.5rem;
@@ -116,6 +121,7 @@ body{
                align-items: center;
                font-size: 3.5rem;
                font-weight: 700;
+               color: var(--Dark-Grayish-Blue);
                .currencey-symbol{
                   margin-right: 2px;
                   font-size: 2rem;
@@ -179,6 +185,9 @@ body{
          color: white;
          padding: 3.5rem 2rem;
          z-index: 2;
+         .price{
+            color: white !important;
+         }
          .feature-list{
             .feature-list-item{
                border-top: 1px solid var(--Light-Grayish-Blue) !important;
