@@ -91,12 +91,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
   background-position: right top, left bottom;
   background-repeat: no-repeat;
   background-size: contain, auto;
   background-color: var(--Very-Light-Grayish-Blue);
-  height: 100vh;
+  height: 100%;
+  line-height: 1;
 }
 
 .main-container {
@@ -104,18 +106,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  padding: 20px;
+  width: 75%;
 }
 .main-container header {
   width: 100%;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .main-container header .title-wrapper {
   text-align: center;
 }
 .main-container header .title-wrapper .title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--Dark-Grayish-Blue);
   margin-bottom: 1.5rem;
 }
@@ -123,6 +126,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .main-container header .toggle-wrapper p {
   font-size: 0.8rem;
@@ -179,6 +183,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .main-container .cards-container .card {
   position: relative;
@@ -195,6 +200,9 @@ body {
 .main-container .cards-container .card .card-title {
   margin-bottom: 0.5rem;
 }
+.main-container .cards-container .card .card-title h3 {
+  font-size: 1rem;
+}
 .main-container .cards-container .card .price-wrapper {
   margin-bottom: 0.5rem;
 }
@@ -202,7 +210,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--Dark-Grayish-Blue);
 }
@@ -287,12 +295,25 @@ body {
 }
 
 footer {
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   bottom: 0;
+  padding: 10px;
+  background-color: #333;
+  width: 100%;
+}
+@media only screen and (max-width : 550px) {
+  footer {
+    position: relative;
+    bottom: 0;
+  }
 }
 footer .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 footer .attribution a {
   color: hsl(228deg, 45%, 44%);

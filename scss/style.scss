@@ -1,15 +1,24 @@
 @import "_var.scss";
 
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 750px)";
+$media-mobile: "only screen and (max-width : 550px)";
+$media-mobile-sm: "only screen and (max-width : 375px)";
+
+
+
 body{
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    background-image: url('/images/bg-top.svg'), url('/images/bg-bottom.svg');
    background-position: right top, left bottom;
    background-repeat: no-repeat;
    background-size: contain, auto;
    background-color: var(--Very-Light-Grayish-Blue);
-   height: 100vh;
+   height: 100%;
+   line-height: 1;
 }
 
 .main-container{
@@ -17,17 +26,17 @@ body{
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   width: 70%;
+   padding: 20px;
+   width: 75%;
 
    header{
       width: 100%;
       text-align: center;
-      // background-color: yellow;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       .title-wrapper{
          text-align: center;
          .title{
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--Dark-Grayish-Blue);
             margin-bottom: 1.5rem;
          }
@@ -36,6 +45,7 @@ body{
          display: flex;
          justify-content: center;
          align-items: center;
+         width: 100%;
          p{
             font-size: 0.8rem;
             font-weight: 600;
@@ -96,7 +106,7 @@ body{
       justify-content:space-around;
       align-items: center;
       width: 100%;
-      // padding: 10px;
+      margin-bottom: 1rem;
       
       .card{
          position: relative;
@@ -112,6 +122,9 @@ body{
 
          .card-title{
             margin-bottom: 0.5rem;
+            h3{
+               font-size: 1rem;
+            }
          }
          .price-wrapper{
             margin-bottom: 0.5rem;
@@ -119,7 +132,7 @@ body{
                display: flex;
                justify-content: center;
                align-items: center;
-               font-size: 3.5rem;
+               font-size: 2.5rem;
                font-weight: 700;
                color: var(--Dark-Grayish-Blue);
                .currencey-symbol{
@@ -211,8 +224,23 @@ body{
 
 
 footer{
-   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
    bottom: 0;
-   .attribution { font-size: 11px; text-align: center; }
-   .attribution a { color: hsl(228, 45%, 44%); } 
+   padding: 10px;
+   background-color: #333;
+   width: 100%;
+   @media #{$media-mobile} {
+      position: relative;
+      bottom: 0;
+   }
+   .attribution { 
+      font-size: 11px; text-align: center; 
+      color: white;
+      a { 
+      color: hsl(228, 45%, 44%); 
+      } 
+   }
 }
