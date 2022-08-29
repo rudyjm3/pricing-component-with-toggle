@@ -21,12 +21,15 @@ body{
    height: 100vh;
    line-height: 1;
 
-   @media #{$media-mobile} {
+   @media #{$media-tablet} {
       background-image: url('/images/bg-top.svg');
       background-position: 150% -10%;//1st percent for left/right. 2nd for up/down position
       background-repeat: no-repeat;
       background-size:60%;
    }
+   // @media #{$media-mobile} {
+      
+   // }
 }
 
 .main-container{
