@@ -99,7 +99,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain, auto;
   background-color: var(--Very-Light-Grayish-Blue);
-  height: 100vh;
+  height: 100%;
   line-height: 1;
 }
 @media only screen and (max-width : 900px) {
