@@ -306,7 +306,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   bottom: 0;
   padding: 10px;
   background-color: #333;
