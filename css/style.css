@@ -85,6 +85,7 @@ select {
   --Light-Grayish-Blue: hsl(234, 14%, 74%);
   --Grayish-Blue: hsl(233, 13%, 49%);
   --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --Brand-Color-SkyBlue: #1cc3e8;
 }
 
 body {
@@ -100,6 +101,14 @@ body {
   height: 100%;
   line-height: 1;
 }
+@media only screen and (max-width : 625px) {
+  body {
+    background-image: url("/images/bg-top.svg");
+    background-position: 150% -10%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+}
 
 .main-container {
   display: flex;
@@ -108,6 +117,16 @@ body {
   flex-wrap: wrap;
   padding: 20px;
   width: 75%;
+}
+@media only screen and (max-width : 900px) {
+  .main-container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width : 625px) {
+  .main-container {
+    width: 100%;
+  }
 }
 .main-container header {
   width: 100%;
@@ -185,6 +204,13 @@ body {
   width: 100%;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+}
 .main-container .cards-container .card {
   position: relative;
   display: flex;
@@ -197,11 +223,22 @@ body {
   border-radius: 10px;
   box-shadow: 0px 6px 10px 3px rgba(109, 68, 244, 0.2);
 }
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
 .main-container .cards-container .card .card-title {
   margin-bottom: 0.5rem;
 }
 .main-container .cards-container .card .card-title h3 {
   font-size: 1rem;
+}
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container .card .card-title {
+    margin-bottom: 1.5rem;
+  }
 }
 .main-container .cards-container .card .price-wrapper {
   display: flex;
@@ -270,15 +307,32 @@ body {
   right: -20px;
   padding-right: 3rem;
 }
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container .card:nth-child(1) {
+    right: 0;
+    padding: 2rem;
+  }
+}
 .main-container .cards-container .card:nth-child(3) {
   right: 20px;
   padding-left: 3rem;
+}
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container .card:nth-child(3) {
+    right: 0;
+    padding: 2rem;
+  }
 }
 .main-container .cards-container .med-card {
   background-image: linear-gradient(to bottom right, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
   color: white;
   padding: 3.5rem 2rem;
   z-index: 2;
+}
+@media only screen and (max-width : 625px) {
+  .main-container .cards-container .med-card {
+    padding: 2rem;
+  }
 }
 .main-container .cards-container .med-card .currencey-symbol {
   color: white !important;
@@ -312,10 +366,9 @@ footer {
   background-color: #333;
   width: 100%;
 }
-@media only screen and (max-width : 550px) {
+@media only screen and (max-width : 625px) {
   footer {
     position: relative;
-    bottom: 0;
   }
 }
 footer .attribution {
@@ -324,5 +377,6 @@ footer .attribution {
   color: white;
 }
 footer .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: var(--Brand-Color-SkyBlue);
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

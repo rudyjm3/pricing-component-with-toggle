@@ -1,8 +1,8 @@
 @import "_var.scss";
 
 $media-desktop: "only screen and (max-width : 1024px)";
-$media-tablet: "only screen and (max-width : 750px)";
-$media-mobile: "only screen and (max-width : 550px)";
+$media-tablet: "only screen and (max-width : 900px)";
+$media-mobile: "only screen and (max-width : 625px)";
 $media-mobile-sm: "only screen and (max-width : 375px)";
 
 
@@ -19,6 +19,13 @@ body{
    background-color: var(--Very-Light-Grayish-Blue);
    height: 100%;
    line-height: 1;
+
+   @media #{$media-mobile} {
+      background-image: url('/images/bg-top.svg');
+      background-position: 150% -10%;//1st percent for left/right. 2nd for up/down position
+      background-repeat: no-repeat;
+      background-size:60%;
+   }
 }
 
 .main-container{
@@ -28,6 +35,13 @@ body{
    flex-wrap: wrap;
    padding: 20px;
    width: 75%;
+
+   @media #{$media-tablet} {
+      width: 95%;
+   }
+   @media #{$media-mobile} {
+      width: 100%;
+   }
 
    header{
       width: 100%;
@@ -107,6 +121,12 @@ body{
       align-items: center;
       width: 100%;
       margin-bottom: 1rem;
+
+      @media #{$media-mobile} {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+         padding: 0 10px;
+      }
       
       .card{
          position: relative;
@@ -120,10 +140,18 @@ body{
          border-radius: 10px;
          box-shadow: 0px 6px 10px 3px rgba(109, 68, 244, 0.2);
 
+         @media #{$media-mobile} {
+            width: 100%;
+            margin-bottom: 2rem;
+
+         }
          .card-title{
             margin-bottom: 0.5rem;
             h3{
                font-size: 1rem;
+            }
+            @media #{$media-mobile} {
+               margin-bottom: 1.5rem;
             }
          }
          .price-wrapper{
@@ -193,16 +221,27 @@ body{
       .card:nth-child(1){
          right: -20px;
          padding-right: 3rem;
+         @media #{$media-mobile} {
+            right: 0;
+            padding:2rem;
+         }
       }
       .card:nth-child(3){
          right: 20px;
          padding-left: 3rem;
+         @media #{$media-mobile} {
+            right: 0;
+            padding:2rem;
+         }
       }
       .med-card{
          background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
          color: white;
          padding: 3.5rem 2rem;
          z-index: 2;
+         @media #{$media-mobile} {
+            padding: 2rem;
+         }
          .currencey-symbol{
             color: white !important;
          }
@@ -242,13 +281,15 @@ footer{
    width: 100%;
    @media #{$media-mobile} {
       position: relative;
-      bottom: 0;
+
    }
    .attribution { 
       font-size: 11px; text-align: center; 
       color: white;
       a { 
-      color: hsl(228, 45%, 44%); 
+      // color: hsl(228, 45%, 44%); 
+      color: var(--Brand-Color-SkyBlue);
+      text-decoration: none;
       } 
    }
 }
