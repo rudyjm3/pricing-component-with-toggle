@@ -1,26 +1,19 @@
 
 const checkbox = document.getElementById('check-box');
+let prices = document.querySelectorAll('.price');
+
 console.log(checkbox);
+console.log(prices);
 
-checkbox.addEventListener('click', () => {
-   if (condition) {
-      
+checkbox.addEventListener('change', (e) => {
+
+   if (e.target.checked) {
+      alert ("Toggle is in checked position"); 
+      console.log("Toggle is in checked position");
    } else {
-      
+      alert("Not checked");
+      console.log("Not checked");
    }
-})
 
+});
 
-// function toggle() {
-//    if (checkbox.checked == checkbox.checked) {
-//       alert("toggle is checked");
-//    } else {
-//       alert("toggle is un checked");
-//    }
-   
-//    // if (checkbox != checkbox.checked) {
-//    //    alert("toggle is unchecked");
-//    // }
-
-// };
-// toggle();

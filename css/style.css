@@ -204,7 +204,16 @@ body {
   font-size: 1rem;
 }
 .main-container .cards-container .card .price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
+}
+.main-container .cards-container .card .price-wrapper .currencey-symbol {
+  margin-right: 2px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
 }
 .main-container .cards-container .card .price-wrapper .price {
   display: flex;
@@ -213,10 +222,6 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--Dark-Grayish-Blue);
-}
-.main-container .cards-container .card .price-wrapper .price .currencey-symbol {
-  margin-right: 2px;
-  font-size: 2rem;
 }
 .main-container .cards-container .card .feature-list-wrapper {
   width: 100%;
@@ -274,6 +279,9 @@ body {
   color: white;
   padding: 3.5rem 2rem;
   z-index: 2;
+}
+.main-container .cards-container .med-card .currencey-symbol {
+  color: white !important;
 }
 .main-container .cards-container .med-card .price {
   color: white !important;

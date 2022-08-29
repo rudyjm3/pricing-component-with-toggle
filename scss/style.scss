@@ -127,7 +127,16 @@ body{
             }
          }
          .price-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 0.5rem;
+            .currencey-symbol{
+               margin-right: 2px;
+               font-size: 1.5rem;
+               font-weight: 700;
+               color: var(--Dark-Grayish-Blue);
+            }
             .price{
                display: flex;
                justify-content: center;
@@ -135,10 +144,6 @@ body{
                font-size: 2.5rem;
                font-weight: 700;
                color: var(--Dark-Grayish-Blue);
-               .currencey-symbol{
-                  margin-right: 2px;
-                  font-size: 2rem;
-               }
             }
          }
          .feature-list-wrapper{
@@ -198,6 +203,9 @@ body{
          color: white;
          padding: 3.5rem 2rem;
          z-index: 2;
+         .currencey-symbol{
+            color: white !important;
+         }
          .price{
             color: white !important;
          }
@@ -227,7 +235,7 @@ footer{
    display: flex;
    justify-content: center;
    align-items: center;
-   position: relative;
+   position: absolute;
    bottom: 0;
    padding: 10px;
    background-color: #333;
