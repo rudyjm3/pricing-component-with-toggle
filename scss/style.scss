@@ -18,7 +18,7 @@ body{
    background-repeat: no-repeat;
    background-size: contain, auto;
    background-color: var(--Very-Light-Grayish-Blue);
-   height: 100%;
+   height: 100vh;
    line-height: 1;
 
    @media #{$media-mobile} {
