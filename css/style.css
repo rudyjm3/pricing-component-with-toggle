@@ -207,8 +207,8 @@ body {
 }
 @media only screen and (max-width : 625px) {
   .main-container .cards-container {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 10px;
   }
 }
@@ -227,6 +227,7 @@ body {
 @media only screen and (max-width : 625px) {
   .main-container .cards-container .card {
     width: 100%;
+    max-width: 260px;
     margin-bottom: 2rem;
   }
 }
